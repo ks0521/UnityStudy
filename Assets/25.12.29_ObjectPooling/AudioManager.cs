@@ -16,11 +16,8 @@ namespace ObjectPooling
         }
         IEnumerator PlaySound()
         {
-
             yield return new WaitForSeconds(1);
             PoolManager.poolDic["Sound"].ReturnPool(gameObject);
         }
     }
-
-
 }

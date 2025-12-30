@@ -5,9 +5,10 @@ namespace ObjectPooling
 {
     public class Player : MonoBehaviour
     {
+        [SerializeField]Transform firePoint;
         void Fire()
         {
-            PoolManager.poolDic["Bullet"].UsePool(transform.position, transform.rotation);
+            PoolManager.poolDic["Bullet"].UsePool(firePoint.position, firePoint.rotation);
         }
         void Update()
         {

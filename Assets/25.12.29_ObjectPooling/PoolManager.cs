@@ -32,6 +32,11 @@ namespace ObjectPooling
         }
         public void UsePool(Vector3 pos, Quaternion rot)
         {
+            if (pool.Count <= 0)
+            {
+                Debug.LogWarning("풀 내부 남은 오브젝트 없음");
+                return;
+            }
             GameObject newObj = pool.Dequeue();
             newObj.transform.position = pos;
             newObj.transform.rotation = rot;
