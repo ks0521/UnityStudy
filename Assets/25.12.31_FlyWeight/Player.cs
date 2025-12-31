@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using StateMachine2;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -169,6 +170,7 @@ namespace sm
     //스킬(공격전략)을 하나 파생시켜서 적용해보기 합시다.
     public class Player : MonoBehaviour
     {
+        public GameEvent onDie;
         public enum StateType
         {
             Idle,
@@ -192,8 +194,15 @@ namespace sm
         void Update()
         {
             sm.Stay();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Die();
+            }
         }
-
+        void Die()
+        {
+            onDie.Event();
+        }
 
         private void OnTriggerEnter(Collider other)
         {

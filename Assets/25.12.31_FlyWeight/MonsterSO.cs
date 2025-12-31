@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace FlyWeight
 {
+    //
     //과제2: 몬스터 있고, 몬스터 속성(멤버변수)존재
     //공유되어야 하는 데이터(MaxHp)와
     //공유되면 안되는 객체만의 데이터(hp)
