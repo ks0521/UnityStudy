@@ -63,7 +63,7 @@ namespace FlyWeight
         }
 
     }
-    public class Monster : MonoBehaviour
+    public class MonsterFlyWeight : MonoBehaviour
     {
         public int hp = 100;
         public string monsterName;
