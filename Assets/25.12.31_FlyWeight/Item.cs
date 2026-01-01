@@ -7,13 +7,13 @@ namespace sm
     public class Item : MonoBehaviour
     {
         public GameObject skillPrafab;
-        public ClawAttackStrategy attackStrategy;
+        //public ClawAttackStrategy attackStrategy;
 
         public void Start()
         {
 
-            attackStrategy = new ClawAttackStrategy();
-            attackStrategy.skillPrafab = skillPrafab;
+            //attackStrategy = new ClawAttackStrategy();
+            //attackStrategy.skillPrafab = skillPrafab;
         }
     }
 

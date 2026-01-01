@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2dbc9633b45cbc4db3d7b66a0b64442, type: 3}
-  m_Name: DragonDropList
+  m_Name: Orc
   m_EditorClassIdentifier: 
   maxHp: 100
   monsterImage: {fileID: 0}
-  monsterName: "\uB4DC\uB798\uACE4"
+  monsterName: "\uC624\uD06C"
   dropList:
-  - "\uC6A9\uC625"
-  - "\uC6A9\uB9B0"
-  - "\uAC00\uC8FD"
+  - "\uBABD\uB465\uC774"
+  - "\uC624\uD06C \uACE0\uAE30"
+  - "\uC624\uD06C \uC190\uAC00\uB77D"
