@@ -9,6 +9,6 @@ public class MonsterData : ScriptableObject
     public int maxHp;
     public Sprite monsterImage;
     public string monsterName;
-    public List<string> dropList;
+    public List<GameObject> dropList;
 }
 

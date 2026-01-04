@@ -16,6 +16,5 @@ MonoBehaviour:
   monsterImage: {fileID: 0}
   monsterName: "\uB4DC\uB798\uACE4"
   dropList:
-  - "\uC6A9\uC625"
-  - "\uC6A9\uB9B0"
-  - "\uAC00\uC8FD"
+  - {fileID: 7982756755330062031, guid: 266b5c96a847b1b439a4a2896258820f, type: 3}
+  - {fileID: 1365366763787362350, guid: 0732084281c9c8c4cbe85a1cd3f7962a, type: 3}
