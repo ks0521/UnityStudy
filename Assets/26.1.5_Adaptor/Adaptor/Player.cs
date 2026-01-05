@@ -4,7 +4,7 @@ using Unity.Jobs.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace AbstractFactory
+namespace Adaptor
 {
     public class Weapon
     {
@@ -124,6 +124,10 @@ namespace AbstractFactory
             }
         }
     }
+    public interface IInteractable
+    {
+        public void Interaction();
+    }
     public class Player : MonoBehaviour
     {
         public PlayerJob job;
@@ -144,7 +148,14 @@ namespace AbstractFactory
             Debug.Log(weapon.GetType());
             Debug.Log(armor.GetType());
         }
-
+        public void OnTriggerEnter(Collider other)
+        {
+            IInteractable interactable = other.GetComponent<IInteractable>();
+            if (interactable != null)
+            {
+                interactable.Interaction();
+            }
+        }
     }
 
 }
