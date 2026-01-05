@@ -6,51 +6,77 @@ using UnityEngine;
 
 namespace Builder
 {
-    //빌더 패턴 : 생성부(객체의 생성)와 표현부(값을 넣기)를 분리
+    [System.Serializable]
     public class Monster
     {
-        public string name;
-        public int hp;
-        public int atk;
+        [SerializeField]
+        private string name;
+        [SerializeField]
+        private int hp;
+        [SerializeField]
+        private int atk;
 
+        public Monster(string name, int hp, int atk)
+        {
+            this.name = name;
+            this.hp = hp;
+            this.atk = atk;
+        }
     }
+    //빌더 패턴 : 생성부(객체의 생성)와 표현부(값을 넣기)를 분리
 
     public class MonsterBuilder
     {
-        private Monster mon;
-        public MonsterBuilder()
+        private string name;
+        private int hp;
+        private int atk;
+        GameObject prefeb;
+        public MonsterBuilder(GameObject prefeb)
         {
-            mon = new Monster();
+            this.prefeb = prefeb;
         }
         public MonsterBuilder SetName(string name)
         {
-            mon.name = name;
+            this.name = name;
             return this;
         }
         public MonsterBuilder SetHp(int hp)
         {
-            mon.hp = hp;
+            this.hp = hp;
             return this;
         }
         public MonsterBuilder setAtk(int atk)
         {
-            mon.atk = atk;
+            this.atk = atk;
             return this;
         }
-        public Monster Build()
+        public void Build()
         {
-            return mon;
+            GameObject newObj = GameObject.Instantiate(prefeb);
+            MonsterComponent mc = newObj.GetComponent<MonsterComponent>();
+            mc.monData = new Monster(name,hp,atk);
         }
     }
-    public class BuilderTest : MonoBehaviour
+    public class BuliderTest : MonoBehaviour
     {
         MonsterBuilder builder;
+        public GameObject monsterPrefeb;
+
         Monster mon;
         private void Start()
         {
-            mon = builder.SetHp(100).SetName("슬라임").setAtk(10).Build();
+            builder = new MonsterBuilder(monsterPrefeb);
+            builder.SetHp(100).SetName("슬라임").setAtk(10);
             StringBuilder sb = new StringBuilder();
             sb.Append("A").Append("B").Append("C").ToString();
+            Debug.Log(sb);
+        }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                builder.Build();
+            }
         }
     }
 }
