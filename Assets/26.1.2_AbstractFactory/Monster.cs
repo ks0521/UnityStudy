@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace AbstractFactory
 {
+    //공격 / 추격전략 구현하되 seal이용해서 제약 강화
+    //예시로, 근접공격 , 근접 추격을 하는 슬라임 팩토리가 있다고 가정하고
+    //슬라임의 공격과 추격형태가 일관성이 있다고 해야 한다면 
+    //슬라임 팩토리의 상속된 자식팩토리도 근접공격의 파생이나 근접추격을 가져야만 함
+    //수치는 다를 수 있더라도 형태 자체는 동일해야 한다는 뜻
     public abstract class AttackStrategy
     {
         public abstract void Attack();
