@@ -59,13 +59,13 @@ public class project : MonoBehaviour
         int total = 0;
         for (int i = 0; i < weight.Length; i++)
         {
-            total += weight[i];
-            //오류 발생 시 최하등급 부여
             if (weight[i] < 0)
             {
                 Debug.LogWarning($"가중치 입력이 잘못되었습니다 weight[{i}] = {weight[i]}");
                 return 0;
             }
+            total += weight[i];
+            //오류 발생 시 최하등급 부여
         }
         if (total == 0)
         {
