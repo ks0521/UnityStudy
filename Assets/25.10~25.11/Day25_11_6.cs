@@ -52,13 +52,13 @@ public class Day25_11_6 : MonoBehaviour
         {
             if (Player.GetHp() + recovery > Player.GetMaxHp())
             {
-                Debug.Log($"체력 {Player.GetMaxHp() - Player.GetHp()} 회복! \n현재 HP: {Player.GetMaxHp()}");
+                Debug.Log($"체력 {Player.GetMaxHp() - Player.GetHp()} 회복! \n현재 Hp: {Player.GetMaxHp()}");
                 Player.Recovery(recovery);
             }
             else
             {
                 Player.Recovery(recovery);
-                Debug.Log($"체력 {recovery}만큼 회복! \n현재 HP: {Player.GetHp()}");
+                Debug.Log($"체력 {recovery}만큼 회복! \n현재 Hp: {Player.GetHp()}");
             }
         }
         public override void PrintInfo(int i)

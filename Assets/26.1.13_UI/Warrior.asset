@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: Warrior
-  m_EditorClassIdentifier: Assembly-CSharp:UI:PlayerJobData
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJobData
   defaultData:
     hp: 300
     atk: 10

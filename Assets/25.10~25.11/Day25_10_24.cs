@@ -118,8 +118,8 @@ public class Day25_10_24 : MonoBehaviour
     /// <summary>
     /// 인벤토리에 있는 물약을 사용하는 함수
     /// </summary>
-    /// <param Name="UserHP">유저의 현재 HP</param>
-    /// <param Name="MaxHP">캐릭터의 최대 HP</param>
+    /// <param Name="UserHP">유저의 현재 Hp</param>
+    /// <param Name="MaxHP">캐릭터의 최대 Hp</param>
     /// <param Name="index">사용하려는 특정 인벤토리 변수의 참조</param>
     /// <param Name="ItemIndex">사용하려는 아이템의 정보</param>
     void UseItem(ref int UserHP, int MaxHP, ref int index, in string [] ItemIndex)

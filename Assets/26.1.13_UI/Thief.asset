@@ -11,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: Thief
-  m_EditorClassIdentifier: Assembly-CSharp:UI:PlayerJobData
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJobData
   defaultData:
     hp: 150
-    atk: 25
+    atk: 20
   sprite: {fileID: 21300000, guid: 8de947df8034efa44abffbd8b97dfa84, type: 3}
